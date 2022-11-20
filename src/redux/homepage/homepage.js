@@ -8,15 +8,15 @@ const GET_ALL_STOCKS = 'stockMarket/homepage/getAllStocks';
 
 const allStocksApiCall = async () => {
   const stocks = await axios.get(getAllStocks);
-  return stocks;
+  return stocks.data;
 };
 
 export const fetchStocks = createAsyncThunk(GET_ALL_STOCKS, allStocksApiCall);
 
-const homepageReducer = (allStocks = [], action) => {
+const homepageReducer = (allStocks = { data: [], loading: true }, action) => {
   switch (action.type) {
     case `${GET_ALL_STOCKS}/fulfilled`:
-      return action.payload;
+      return { data: action.payload, loading: false };
     default:
       return allStocks;
   }
