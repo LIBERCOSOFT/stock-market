@@ -61,7 +61,7 @@ const Homepage = () => {
             {' '}
             Total Stocks
           </span>
-          <Link to="/list/">
+          <Link to="/listall">
             See All Stocks
             {' '}
             <i className="fa-sharp fa-solid fa-arrow-right" />
