@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useParams, Link } from 'react-router-dom';
 
 import consumerCyclical from '../components/images/consumer-svgrepo-com.svg';
 import energy from '../components/images/energy-svgrepo-com.svg';
@@ -19,6 +20,8 @@ import services from '../components/images/Services.svg';
 import conglomerates from '../components/images/Conglomerates.svg';
 
 const ListFilteredStocks = () => {
+  const allStocks = useSelector((state) => state.allStocks.data);
+
   const { id } = useParams();
   const typeSpecified = {
     'Consumer Cyclical': consumerCyclical,
@@ -48,7 +51,49 @@ const ListFilteredStocks = () => {
           {' '}
         </h3>
       </div>
-      {id}
+      <div className="list__container">
+        <ul>
+          {allStocks[id].map((stock) => (
+            <li key={stock.symbol}>
+              <Link to="/">
+                <div>
+                  <p>
+                    <span>Name:</span>
+                    {' '}
+                    {stock.companyName}
+                  </p>
+                  <p>
+                    <span>Industry:</span>
+                    {' '}
+                    {stock.industry}
+                  </p>
+                  <p>
+                    <span>Price per Stock:</span>
+                    {' '}
+                    $
+                    {stock.price}
+                  </p>
+                  <p>
+                    <span>Market Cap:</span>
+                    {' '}
+                    $
+                    {stock.marketCap.toLocaleString()}
+                  </p>
+                  <p>
+                    <span>
+                      See about
+                      {' '}
+                      {stock.symbol}
+                    </span>
+                    {' '}
+                    <i className="fa-sharp fa-solid fa-arrow-right" />
+                  </p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
