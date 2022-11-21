@@ -44,9 +44,9 @@ nav > div > i {
   font-size: x-large;
 }
 
-.all__stock__container > div > button {
+.all__stock__container > div > a {
   align-self: flex-start;
-  border: none;
+  text-decoration: none;
   background-color: #35548b;
   padding: 1em;
   font-size: 1em;
@@ -81,7 +81,7 @@ nav > div > i {
   cursor: pointer;
 }
 
-.all__stock__container > div > button:hover,
+.all__stock__container > div > a:hover,
 .filter__container > div:hover {
   background:
     linear-gradient(

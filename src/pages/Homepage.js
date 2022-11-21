@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { fetchStocks } from '../redux/homepage/homepage';
 
 import allStockImg from '../components/images/all_stock.svg';
@@ -12,11 +13,18 @@ const Homepage = () => {
   const allStocks = useSelector((state) => state.allStocks.data);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (allStocks.length < 1) {
       dispatch(fetchStocks());
     }
   }, [dispatch, allStocks]);
+
+  const filterClick = (e) => {
+    const path = `/list/${e.target.id}`;
+    navigate(path);
+  };
 
   return (
     <div className="homepage">
@@ -29,39 +37,39 @@ const Homepage = () => {
             {' '}
             Stocks
           </span>
-          <button type="button">
+          <Link to="/list/all">
             See Frist 1000 Stocks
             {' '}
             <i className="fa-sharp fa-solid fa-arrow-right" />
             {' '}
-          </button>
+          </Link>
         </div>
       </div>
       <h4>Filter By:</h4>
       <div className="filter__container">
-        <div>
-          <i className="fa-sharp fa-solid fa-arrow-right" />
-          <img src={stockImg} alt="" />
-          <h3>Stock</h3>
-          <span>First 1000 Stocks</span>
+        <div id="stocks" onClick={filterClick} onKeyDown={filterClick} role="button" tabIndex={0}>
+          <i className="fa-sharp fa-solid fa-arrow-right" id="stocks" />
+          <img src={stockImg} alt="" id="stocks" />
+          <h3 id="stocks">Stock</h3>
+          <span id="stocks">First 1000 Stocks</span>
         </div>
-        <div>
-          <i className="fa-sharp fa-solid fa-arrow-right" />
-          <img src={trustImg} alt="" />
-          <h3>Trust</h3>
-          <span>First 1000 Trusts</span>
+        <div id="trusts" onClick={filterClick} onKeyDown={filterClick} role="button" tabIndex={0}>
+          <i className="fa-sharp fa-solid fa-arrow-right" id="trusts" />
+          <img src={trustImg} alt="" id="trusts" />
+          <h3 id="trusts">Trust</h3>
+          <span id="trusts">First 1000 Trusts</span>
         </div>
-        <div>
-          <i className="fa-sharp fa-solid fa-arrow-right" />
-          <img src={eftImg} alt="" />
-          <h3>ETF</h3>
-          <span>First 1000 Etfs</span>
+        <div id="etfs" onClick={filterClick} onKeyDown={filterClick} role="button" tabIndex={0}>
+          <i className="fa-sharp fa-solid fa-arrow-right" id="etfs" />
+          <img src={eftImg} alt="" id="etfs" />
+          <h3 id="etfs">ETF</h3>
+          <span id="etfs">First 1000 Etfs</span>
         </div>
-        <div>
-          <i className="fa-sharp fa-solid fa-arrow-right" />
-          <img src={fundImg} alt="" />
-          <h3>Fund</h3>
-          <span>First 1000 Funds</span>
+        <div id="funds" onClick={filterClick} onKeyDown={filterClick} role="button" tabIndex={0}>
+          <i className="fa-sharp fa-solid fa-arrow-right" id="funds" />
+          <img src={fundImg} alt="" id="funds" />
+          <h3 id="funds">Fund</h3>
+          <span id="funds">First 1000 Funds</span>
         </div>
       </div>
     </div>
