@@ -1,30 +1,54 @@
+/* eslint-disable max-len */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { fetchStocks } from '../redux/homepage/homepage';
 
 import allStockImg from '../components/images/all_stock.svg';
-import stockImg from '../components/images/stock.svg';
-import eftImg from '../components/images/etf.svg';
-import fundImg from '../components/images/funds.svg';
-import trustImg from '../components/images/trust.svg';
+import consumerCyclical from '../components/images/consumer-svgrepo-com.svg';
+import energy from '../components/images/energy-svgrepo-com.svg';
+import technology from '../components/images/Technology.svg';
+import industrial from '../components/images/industry-svgrepo-com.svg';
+import financialServices from '../components/images/financial-services.svg';
+import basicMaterials from '../components/images/basic-home-svgrepo-com.svg';
+import communicationServices from '../components/images/communication-svgrepo-com.svg';
+import consumerDefence from '../components/images/consumer-defence.svg';
+import healthCare from '../components/images/healthcare-svgrepo-com.svg';
+import realEstate from '../components/images/real-estate-svgrepo-com.svg';
+import utilities from '../components/images/Utilities.svg';
+import industrialGoods from '../components/images/Industrial_Goods.svg';
+import financial from '../components/images/Financial.svg';
+import services from '../components/images/Services.svg';
+import conglomerates from '../components/images/Conglomerates.svg';
 
 const Homepage = () => {
   const allStocks = useSelector((state) => state.allStocks.data);
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   useEffect(() => {
-    if (allStocks.length < 1) {
+    if (allStocks.allAssets.length < 1) {
       dispatch(fetchStocks());
     }
   }, [dispatch, allStocks]);
 
-  const filterClick = (e) => {
-    const path = `/list/${e.target.id}`;
-    navigate(path);
-  };
+  const filterOptions = [
+    { query: 'Consumer Cyclical', img: consumerCyclical },
+    { query: 'Energy', img: energy },
+    { query: 'Technology', img: technology },
+    { query: 'Industrials', img: industrial },
+    { query: 'Financial Services', img: financialServices },
+    { query: 'Basic Materials', img: basicMaterials },
+    { query: 'Communication Services', img: communicationServices },
+    { query: 'Consumer Defensive', img: consumerDefence },
+    { query: 'Healthcare', img: healthCare },
+    { query: 'Real Estate', img: realEstate },
+    { query: 'Utilities', img: utilities },
+    { query: 'Industrial Goods', img: industrialGoods },
+    { query: 'Financial', img: financial },
+    { query: 'Services', img: services },
+    { query: 'Conglomerates', img: conglomerates },
+  ];
 
   return (
     <div className="homepage">
@@ -33,44 +57,32 @@ const Homepage = () => {
         <div>
           <h2>All Stock Data On The Stock Market</h2>
           <span>
-            {allStocks.length.toLocaleString()}
+            {allStocks.allAssets.length.toLocaleString()}
             {' '}
-            Stocks
+            Total Stocks
           </span>
-          <Link to="/list/all">
-            See Frist 1000 Stocks
+          <Link to="/list/">
+            See All Stocks
             {' '}
             <i className="fa-sharp fa-solid fa-arrow-right" />
             {' '}
           </Link>
         </div>
       </div>
-      <h4>Filter By:</h4>
+      <h4>Filter By Sector:</h4>
       <div className="filter__container">
-        <div id="stocks" onClick={filterClick} onKeyDown={filterClick} role="button" tabIndex={0}>
-          <i className="fa-sharp fa-solid fa-arrow-right" id="stocks" />
-          <img src={stockImg} alt="" id="stocks" />
-          <h3 id="stocks">Stock</h3>
-          <span id="stocks">First 1000 Stocks</span>
-        </div>
-        <div id="trusts" onClick={filterClick} onKeyDown={filterClick} role="button" tabIndex={0}>
-          <i className="fa-sharp fa-solid fa-arrow-right" id="trusts" />
-          <img src={trustImg} alt="" id="trusts" />
-          <h3 id="trusts">Trust</h3>
-          <span id="trusts">First 1000 Trusts</span>
-        </div>
-        <div id="etfs" onClick={filterClick} onKeyDown={filterClick} role="button" tabIndex={0}>
-          <i className="fa-sharp fa-solid fa-arrow-right" id="etfs" />
-          <img src={eftImg} alt="" id="etfs" />
-          <h3 id="etfs">ETF</h3>
-          <span id="etfs">First 1000 Etfs</span>
-        </div>
-        <div id="funds" onClick={filterClick} onKeyDown={filterClick} role="button" tabIndex={0}>
-          <i className="fa-sharp fa-solid fa-arrow-right" id="funds" />
-          <img src={fundImg} alt="" id="funds" />
-          <h3 id="funds">Fund</h3>
-          <span id="funds">First 1000 Funds</span>
-        </div>
+        {filterOptions.map((val) => (
+          <Link to={`/list/${val.query}`} key={val.query}>
+            <i className="fa-sharp fa-solid fa-arrow-right" />
+            <img src={val.img} alt="" />
+            <h3>{val.query}</h3>
+            <span>
+              {allStocks[val.query].length.toLocaleString()}
+              {' '}
+              Stocks
+            </span>
+          </Link>
+        ))}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 body {
   background-color: #4369b2;
 }
@@ -32,7 +33,7 @@ nav > div > i {
 }
 
 .all__stock__container > img {
-  height: 25em;
+  height: 23em;
   width: 100%;
 }
 
@@ -62,27 +63,20 @@ nav > div > i {
   background-color: #35548b;
 }
 
-.filter__container > div > img {
-  height: 8em;
-  width: 8em;
+.filter__container > a > img {
+  height: 3em;
+  width: 3em;
 }
 
 .filter__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   color: #fff;
   font-size: x-large;
 }
 
-.filter__container > div {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1em;
-  cursor: pointer;
-}
-
-.all__stock__container > div > a:hover,
-.filter__container > div:hover {
+.filter__container > a:hover,
+.all__stock__container > div > a:hover {
   background:
     linear-gradient(
       to right,
@@ -91,13 +85,28 @@ nav > div > i {
     );
 }
 
-.filter__container > div:nth-child(2n) {
-  background-color: #3f62a6;
+.filter__container > a {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
-.filter__container > div > h3,
-.filter__container > div > span {
+.filter__container > a:nth-child(2n) {
+  background-color: #2a416f;
+}
+
+.filter__container > a > h3 {
   align-self: flex-end;
+  font-size: large;
+}
+
+.filter__container > a > span {
+  align-self: flex-end;
+  font-size: large;
 }
 
 .filter__container .fa-arrow-right {
@@ -105,5 +114,22 @@ nav > div > i {
   border: 5px solid #fff;
   border-radius: 50%;
   padding: 0.1em;
-  margin-top: 0.5em;
+  margin-top: 0.3em;
+}
+
+.type__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.type__container > img {
+  height: 10em;
+  width: 10em;
+  justify-self: center;
+}
+
+.type__container > h3 {
+  align-self: center;
+  color: #fff;
+  font-size: x-large;
 }
