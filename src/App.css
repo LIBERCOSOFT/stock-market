@@ -75,6 +75,7 @@ nav > div > i {
   font-size: x-large;
 }
 
+.list__container > ul > li:hover,
 .filter__container > a:hover,
 .all__stock__container > div > a:hover {
   background:
@@ -123,7 +124,7 @@ nav > div > i {
 }
 
 .type__container > img {
-  height: 10em;
+  height: 8em;
   width: 10em;
   justify-self: center;
 }
@@ -132,4 +133,41 @@ nav > div > i {
   align-self: center;
   color: #fff;
   font-size: x-large;
+}
+
+/* FILTERED LIST CONTAINER */
+.list__container > ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 1em;
+}
+
+.list__container > ul > li {
+  list-style: none;
+  border: 2px solid #2a416f;
+}
+
+.list__container > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: medium;
+}
+
+.list__container > ul > li > a > div {
+  padding: 1em;
+}
+
+.list__container > ul > li > a > div > p {
+  margin-bottom: 0.4em;
+}
+
+.list__container > ul > li > a > div > p:last-child {
+  margin-top: 1em;
+}
+
+.list__container > ul > li > a > div > p > span {
+  font-size: large;
+  font-weight: bolder;
+  padding: 0.2em;
+  color: #070b12;
 }
