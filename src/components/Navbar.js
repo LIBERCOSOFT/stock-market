@@ -8,7 +8,7 @@ const Navbar = () => (
       <i className="fa-solid fa-chevron-left" />
       2022
     </Link>
-    <p>Dummy Text</p>
+    <p>2022 Stock Data</p>
     <div>
       <i className="fa-solid fa-microphone" />
       <i className="fa-solid fa-gear" />

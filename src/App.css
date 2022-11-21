@@ -22,3 +22,88 @@ nav > a > i {
 nav > div > i {
   padding-left: 1em;
 }
+
+/* HOMEPAGE */
+
+.all__stock__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #5688e4;
+}
+
+.all__stock__container > img {
+  height: 25em;
+  width: 100%;
+}
+
+.all__stock__container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  font-size: x-large;
+}
+
+.all__stock__container > div > button {
+  align-self: flex-start;
+  border: none;
+  background-color: #35548b;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 1em;
+}
+
+.homepage > h4 {
+  color: #fff;
+  padding: 1em;
+  font-size: x-large;
+  background-color: #35548b;
+}
+
+.filter__container > div > img {
+  height: 8em;
+  width: 8em;
+}
+
+.filter__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: #fff;
+  font-size: x-large;
+}
+
+.filter__container > div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  cursor: pointer;
+}
+
+.all__stock__container > div > button:hover,
+.filter__container > div:hover {
+  background:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    );
+}
+
+.filter__container > div:nth-child(2n) {
+  background-color: #3f62a6;
+}
+
+.filter__container > div > h3,
+.filter__container > div > span {
+  align-self: flex-end;
+}
+
+.filter__container .fa-arrow-right {
+  align-self: flex-end;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  padding: 0.1em;
+  margin-top: 0.5em;
+}
