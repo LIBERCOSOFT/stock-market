@@ -208,3 +208,143 @@ nav > div > i {
   font-weight: bolder;
   padding-right: 0.5em;
 }
+
+@media screen and (max-width: 768px) {
+  .filter__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .all__stock__container > img {
+    padding: 0 0.5em;
+  }
+
+  .all__stock__container > div {
+    padding: 1em;
+  }
+
+  .filter__container > a > img {
+    height: 2.5em;
+    width: 2.5em;
+  }
+
+  .list__container > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .details__container > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    font-size: 1em;
+  }
+
+  .filter__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .all__stock__container > img {
+    height: 20em;
+    padding: 0 0.5em;
+  }
+
+  .all__stock__container > div {
+    padding: 1em;
+    font-size: large;
+  }
+
+  .filter__container > a > img {
+    height: 2em;
+    width: 2em;
+  }
+
+  .list__container > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1em;
+  }
+
+  .details__container > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  nav {
+    font-size: 1em;
+  }
+
+  .all__stock__container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .all__stock__container > img {
+    height: 5em;
+  }
+
+  .all__stock__container > div {
+    padding: 1em;
+    font-size: large;
+  }
+
+  .filter__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter__container > a > img {
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  .list__container > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1em;
+  }
+
+  .details__container > div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  nav {
+    font-size: 1em;
+  }
+
+  .filter__container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .type__container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .type__container > img {
+    height: 5em;
+    width: 10em;
+    justify-self: center;
+  }
+
+  .type__container > h3 {
+    padding: 1em;
+  }
+
+  .list__container > ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1em;
+  }
+}
