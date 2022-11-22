@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { fetchStocks } from '../redux/homepage/homepage';
@@ -24,6 +24,7 @@ import conglomerates from '../components/images/Conglomerates.svg';
 const ListFilteredStocks = () => {
   const allStocks = useSelector((state) => state.allStocks.data);
   const loading = useSelector((state) => state.allStocks.loading);
+  const [render, setRender] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -31,6 +32,7 @@ const ListFilteredStocks = () => {
     if (allStocks.allAssets.length < 1) {
       dispatch(fetchStocks());
     }
+    setRender(true);
   }, [dispatch, allStocks]);
 
   const { id } = useParams();
@@ -65,7 +67,7 @@ const ListFilteredStocks = () => {
       {loading ? <Loader /> : null}
       <div className="list__container">
         <ul>
-          {allStocks[id].map((stock) => (
+          {render ? (allStocks[`${id}`] || []).map((stock) => (
             <li key={stock.symbol}>
               <Link to={`/details/${stock.symbol}`}>
                 <div>
@@ -103,7 +105,7 @@ const ListFilteredStocks = () => {
                 </div>
               </Link>
             </li>
-          ))}
+          )) : <Loader />}
         </ul>
       </div>
     </>
