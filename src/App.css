@@ -26,6 +26,12 @@ nav > div > i {
   padding-left: 1em;
 }
 
+.loader__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
 /* HOMEPAGE */
 
 .all__stock__container {

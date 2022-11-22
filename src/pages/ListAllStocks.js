@@ -1,13 +1,16 @@
 /* eslint-disable max-len */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-
 import { fetchStocks } from '../redux/homepage/homepage';
+import Loader from '../components/Loader';
+
 import allStockImg from '../components/images/all_stock.svg';
 
 const ListAllStocks = () => {
   const allStocks = useSelector((state) => state.allStocks.data.allAssets);
+  const loading = useSelector((state) => state.allStocks.loading);
+  const [render, setRender] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -15,6 +18,7 @@ const ListAllStocks = () => {
     if (allStocks.length < 1) {
       dispatch(fetchStocks());
     }
+    setRender(true);
   }, [dispatch, allStocks]);
 
   return (
@@ -25,9 +29,10 @@ const ListAllStocks = () => {
           All Stocks in Stock Exchange
         </h3>
       </div>
+      {loading ? <Loader /> : null}
       <div className="list__container">
         <ul>
-          {allStocks.map((stock) => (
+          {render ? allStocks.map((stock) => (
             <li key={stock.symbol}>
               <Link to={`/details/${stock.symbol}`}>
                 <div>
@@ -70,7 +75,7 @@ const ListAllStocks = () => {
                 </div>
               </Link>
             </li>
-          ))}
+          )) : <Loader />}
         </ul>
       </div>
     </>
