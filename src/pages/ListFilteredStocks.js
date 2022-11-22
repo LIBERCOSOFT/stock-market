@@ -55,7 +55,7 @@ const ListFilteredStocks = () => {
         <ul>
           {allStocks[id].map((stock) => (
             <li key={stock.symbol}>
-              <Link to="/">
+              <Link to={`/details/${stock.symbol}`}>
                 <div>
                   <p>
                     <span>Name:</span>

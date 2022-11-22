@@ -171,3 +171,38 @@ nav > div > i {
   padding: 0.2em;
   color: #070b12;
 }
+
+/* DETAILS PAGE */
+.details__container {
+  margin: 0 2em;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.details__container > img {
+  margin: 0 auto;
+}
+
+.details__container > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.details__container > div > p {
+  border: 2px solid #fff;
+  padding: 1em;
+}
+
+.details__container > p,
+.details__container > div > p {
+  margin: 1em 0;
+  line-height: 2em;
+}
+
+.details__container > p > span,
+.details__container > div > p > span {
+  color: #070b12;
+  font-weight: bolder;
+  padding-right: 0.5em;
+}

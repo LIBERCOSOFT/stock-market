@@ -20,7 +20,7 @@ const ListAllStocks = () => {
         <ul>
           {allStocks.map((stock) => (
             <li key={stock.symbol}>
-              <Link to="/">
+              <Link to={`/details/${stock.symbol}`}>
                 <div>
                   <p>
                     <span>Name:</span>
