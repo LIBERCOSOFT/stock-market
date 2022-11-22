@@ -1,7 +1,9 @@
 /* eslint-disable max-len */
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
+import { fetchStocks } from '../redux/homepage/homepage';
+import Loader from '../components/Loader';
 
 import consumerCyclical from '../components/images/consumer-svgrepo-com.svg';
 import energy from '../components/images/energy-svgrepo-com.svg';
@@ -21,6 +23,15 @@ import conglomerates from '../components/images/Conglomerates.svg';
 
 const ListFilteredStocks = () => {
   const allStocks = useSelector((state) => state.allStocks.data);
+  const loading = useSelector((state) => state.allStocks.loading);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (allStocks.allAssets.length < 1) {
+      dispatch(fetchStocks());
+    }
+  }, [dispatch, allStocks]);
 
   const { id } = useParams();
   const typeSpecified = {
@@ -51,11 +62,12 @@ const ListFilteredStocks = () => {
           {' '}
         </h3>
       </div>
+      {loading ? <Loader /> : null}
       <div className="list__container">
         <ul>
           {allStocks[id].map((stock) => (
             <li key={stock.symbol}>
-              <Link to="/">
+              <Link to={`/details/${stock.symbol}`}>
                 <div>
                   <p>
                     <span>Name:</span>
