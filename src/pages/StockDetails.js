@@ -68,7 +68,7 @@ const StockDetails = () => {
           <span>Price Per Stock:</span>
           {' '}
           $
-          {stockProfile[0].price}
+          {stockProfile[0].price || 0}
         </p>
         <p>
           <span>Market Capital:</span>

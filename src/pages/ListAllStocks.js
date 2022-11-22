@@ -1,12 +1,21 @@
 /* eslint-disable max-len */
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import { fetchStocks } from '../redux/homepage/homepage';
 import allStockImg from '../components/images/all_stock.svg';
 
 const ListAllStocks = () => {
   const allStocks = useSelector((state) => state.allStocks.data.allAssets);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (allStocks.length < 1) {
+      dispatch(fetchStocks());
+    }
+  }, [dispatch, allStocks]);
 
   return (
     <>

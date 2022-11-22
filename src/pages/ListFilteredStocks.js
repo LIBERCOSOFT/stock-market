@@ -1,7 +1,9 @@
 /* eslint-disable max-len */
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
+
+import { fetchStocks } from '../redux/homepage/homepage';
 
 import consumerCyclical from '../components/images/consumer-svgrepo-com.svg';
 import energy from '../components/images/energy-svgrepo-com.svg';
@@ -21,6 +23,14 @@ import conglomerates from '../components/images/Conglomerates.svg';
 
 const ListFilteredStocks = () => {
   const allStocks = useSelector((state) => state.allStocks.data);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (allStocks.allAssets.length < 1) {
+      dispatch(fetchStocks());
+    }
+  }, [dispatch, allStocks]);
 
   const { id } = useParams();
   const typeSpecified = {
