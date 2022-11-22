@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+
   let getRoute = pathname.split('/')[2];
   if (getRoute !== undefined && getRoute.includes('%20')) {
     getRoute = getRoute.replace(/%20/g, ' ');
@@ -10,13 +12,13 @@ const Navbar = () => {
 
   return (
     <nav>
-      <Link to="/">
+      <button type="button" onClick={() => navigate(-1)}>
         {' '}
         <i className="fa-solid fa-chevron-left" />
         2022
-      </Link>
+      </button>
       <p>
-        All
+        {(pathname.split('/')[1] === 'details') ? 'About' : 'All'}
         {' '}
         {getRoute}
         {' '}
