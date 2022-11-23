@@ -23,6 +23,11 @@ const ListItem = ({ stock }) => (
           {stock.price}
         </p>
         <p>
+          <span>Exchange:</span>
+          {' '}
+          {stock.exchange}
+        </p>
+        <p>
           <span>Market Cap:</span>
           {' '}
           $

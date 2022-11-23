@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchStocks } from '../redux/homepage/homepage';
-import ListItem from './ListItem';
+import ListItem from '../components/ListItem';
 import Loader from '../components/Loader';
 
 import consumerCyclical from '../components/images/consumer-svgrepo-com.svg';

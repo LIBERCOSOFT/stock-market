@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchStocks } from '../redux/homepage/homepage';
+import ListItem from '../components/ListItem';
 import Loader from '../components/Loader';
 
 import allStockImg from '../components/images/all_stock.svg';
@@ -87,6 +88,17 @@ const Homepage = () => {
           </Link>
         ))}
       </div>
+      <h4>List of First 1000 Stocks</h4>
+      <div className="home_stock__list">
+        <div className="list__container">
+          <ul>
+            {allStocks.allAssets.slice(0, 1000).map((stock) => (
+              <ListItem key={stock.symbol} stock={stock} />
+            ))}
+          </ul>
+        </div>
+      </div>
+
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchStocks } from '../redux/homepage/homepage';
-import ListItem from './ListItem';
+import ListItem from '../components/ListItem';
 import Loader from '../components/Loader';
 
 import allStockImg from '../components/images/all_stock.svg';
