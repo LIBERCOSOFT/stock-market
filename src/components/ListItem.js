@@ -48,7 +48,18 @@ const ListItem = ({ stock }) => (
 );
 
 ListItem.propTypes = {
-  stock: PropTypes.instanceOf(Object).isRequired,
+  stock: PropTypes.instanceOf(Object),
+};
+
+ListItem.defaultProps = {
+  stock: {
+    companyName: '',
+    industry: '',
+    price: 0,
+    exchange: '',
+    marketCap: 0,
+    symbol: '',
+  },
 };
 
 export default ListItem;

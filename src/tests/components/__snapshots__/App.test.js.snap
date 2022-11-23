@@ -382,6 +382,22 @@ Object {
               </span>
             </a>
           </div>
+          <h4>
+            First 1000 Stocks
+          </h4>
+          <input
+            placeholder="Search stock by company's name"
+            type="text"
+          />
+          <div
+            class="home_stock__list"
+          >
+            <div
+              class="list__container"
+            >
+              <ul />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -763,6 +779,22 @@ Object {
               Stocks
             </span>
           </a>
+        </div>
+        <h4>
+          First 1000 Stocks
+        </h4>
+        <input
+          placeholder="Search stock by company's name"
+          type="text"
+        />
+        <div
+          class="home_stock__list"
+        >
+          <div
+            class="list__container"
+          >
+            <ul />
+          </div>
         </div>
       </div>
     </div>
