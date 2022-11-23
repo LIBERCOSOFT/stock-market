@@ -37,6 +37,7 @@
     <li><a href="https://reactjs.org/">React.js</a></li>
     <li><a href="https://redux.js.org/">Redux</a></li>
     <li><a href="https://financialmodelingprep.com/developer/docs/">Financial Modeling API</a></li>
+    <li><a href="https://jestjs.io/">JEST</a></li>
   </ul>
 </details>
 
@@ -44,7 +45,7 @@
 
 ### Key Features
 
-- **List 5000 stocks on the stock market.**
+- **List over 3000 stocks on the stock market.**
 - **Differentiate the stocks into sectors.**
 - **Display the details of each selected stock.**
 
