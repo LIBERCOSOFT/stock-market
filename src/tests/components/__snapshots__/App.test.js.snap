@@ -1,0 +1,854 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders app component snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+      >
+        <nav>
+          <button
+            type="button"
+          >
+             
+            <i
+              class="fa-solid fa-chevron-left"
+            />
+            2022
+          </button>
+          <p>
+            All
+             
+             
+            Stocks
+          </p>
+          <div>
+            <i
+              class="fa-solid fa-microphone"
+            />
+            <i
+              class="fa-solid fa-gear"
+            />
+          </div>
+        </nav>
+        <div
+          class="homepage"
+        >
+          <div
+            class="loader__container"
+          >
+            <span
+              style="display: inherit; position: relative;"
+            >
+              <span
+                style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-0 1.5s infinite; animation-fill-mode: forwards;"
+              />
+              <span
+                style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-1 1.5s infinite; animation-fill-mode: forwards;"
+              />
+              <span
+                style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-2 1.5s infinite; animation-fill-mode: forwards;"
+              />
+              <span
+                style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-3 1.5s infinite; animation-fill-mode: forwards;"
+              />
+              <span
+                style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-4 1.5s infinite; animation-fill-mode: forwards;"
+              />
+              <span
+                style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-5 1.5s infinite; animation-fill-mode: forwards;"
+              />
+            </span>
+          </div>
+          <div
+            class="all__stock__container"
+          >
+            <img
+              alt=""
+              src="all_stock.svg"
+            />
+            <div>
+              <h2>
+                All Stock Data On The Stock Market
+              </h2>
+              <span>
+                0
+                 
+                Total Stocks
+              </span>
+              <a
+                href="/listall"
+              >
+                See All Stocks
+                 
+                <i
+                  class="fa-sharp fa-solid fa-arrow-right"
+                />
+                 
+              </a>
+            </div>
+          </div>
+          <h4>
+            Filter By Sector:
+          </h4>
+          <div
+            class="filter__container"
+          >
+            <a
+              href="/list/Consumer Cyclical"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="consumer-svgrepo-com.svg"
+              />
+              <h3>
+                Consumer Cyclical
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Energy"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="energy-svgrepo-com.svg"
+              />
+              <h3>
+                Energy
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Technology"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="Technology.svg"
+              />
+              <h3>
+                Technology
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Industrials"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="industry-svgrepo-com.svg"
+              />
+              <h3>
+                Industrials
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Financial Services"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="financial-services.svg"
+              />
+              <h3>
+                Financial Services
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Basic Materials"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="basic-home-svgrepo-com.svg"
+              />
+              <h3>
+                Basic Materials
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Communication Services"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="communication-svgrepo-com.svg"
+              />
+              <h3>
+                Communication Services
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Consumer Defensive"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="consumer-defence.svg"
+              />
+              <h3>
+                Consumer Defensive
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Healthcare"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="healthcare-svgrepo-com.svg"
+              />
+              <h3>
+                Healthcare
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Real Estate"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="real-estate-svgrepo-com.svg"
+              />
+              <h3>
+                Real Estate
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Utilities"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="Utilities.svg"
+              />
+              <h3>
+                Utilities
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Industrial Goods"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="Industrial_Goods.svg"
+              />
+              <h3>
+                Industrial Goods
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Financial"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="Financial.svg"
+              />
+              <h3>
+                Financial
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Services"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="Services.svg"
+              />
+              <h3>
+                Services
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+            <a
+              href="/list/Conglomerates"
+            >
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+              <img
+                alt=""
+                src="Conglomerates.svg"
+              />
+              <h3>
+                Conglomerates
+              </h3>
+              <span>
+                0
+                 
+                Stocks
+              </span>
+            </a>
+          </div>
+          <h4>
+            First 1000 Stocks
+          </h4>
+          <input
+            placeholder="Search stock by company's name"
+            type="text"
+          />
+          <div
+            class="home_stock__list"
+          >
+            <div
+              class="list__container"
+            >
+              <ul />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <nav>
+        <button
+          type="button"
+        >
+           
+          <i
+            class="fa-solid fa-chevron-left"
+          />
+          2022
+        </button>
+        <p>
+          All
+           
+           
+          Stocks
+        </p>
+        <div>
+          <i
+            class="fa-solid fa-microphone"
+          />
+          <i
+            class="fa-solid fa-gear"
+          />
+        </div>
+      </nav>
+      <div
+        class="homepage"
+      >
+        <div
+          class="loader__container"
+        >
+          <span
+            style="display: inherit; position: relative;"
+          >
+            <span
+              style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-0 1.5s infinite; animation-fill-mode: forwards;"
+            />
+            <span
+              style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-1 1.5s infinite; animation-fill-mode: forwards;"
+            />
+            <span
+              style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-2 1.5s infinite; animation-fill-mode: forwards;"
+            />
+            <span
+              style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-3 1.5s infinite; animation-fill-mode: forwards;"
+            />
+            <span
+              style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-4 1.5s infinite; animation-fill-mode: forwards;"
+            />
+            <span
+              style="position: absolute; font-size: 5px; width: 15px; height: 15px; background: rgb(7, 11, 18); border-radius: 50%; animation: react-spinners-PropagateLoader-propogate-5 1.5s infinite; animation-fill-mode: forwards;"
+            />
+          </span>
+        </div>
+        <div
+          class="all__stock__container"
+        >
+          <img
+            alt=""
+            src="all_stock.svg"
+          />
+          <div>
+            <h2>
+              All Stock Data On The Stock Market
+            </h2>
+            <span>
+              0
+               
+              Total Stocks
+            </span>
+            <a
+              href="/listall"
+            >
+              See All Stocks
+               
+              <i
+                class="fa-sharp fa-solid fa-arrow-right"
+              />
+               
+            </a>
+          </div>
+        </div>
+        <h4>
+          Filter By Sector:
+        </h4>
+        <div
+          class="filter__container"
+        >
+          <a
+            href="/list/Consumer Cyclical"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="consumer-svgrepo-com.svg"
+            />
+            <h3>
+              Consumer Cyclical
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Energy"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="energy-svgrepo-com.svg"
+            />
+            <h3>
+              Energy
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Technology"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="Technology.svg"
+            />
+            <h3>
+              Technology
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Industrials"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="industry-svgrepo-com.svg"
+            />
+            <h3>
+              Industrials
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Financial Services"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="financial-services.svg"
+            />
+            <h3>
+              Financial Services
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Basic Materials"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="basic-home-svgrepo-com.svg"
+            />
+            <h3>
+              Basic Materials
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Communication Services"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="communication-svgrepo-com.svg"
+            />
+            <h3>
+              Communication Services
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Consumer Defensive"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="consumer-defence.svg"
+            />
+            <h3>
+              Consumer Defensive
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Healthcare"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="healthcare-svgrepo-com.svg"
+            />
+            <h3>
+              Healthcare
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Real Estate"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="real-estate-svgrepo-com.svg"
+            />
+            <h3>
+              Real Estate
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Utilities"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="Utilities.svg"
+            />
+            <h3>
+              Utilities
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Industrial Goods"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="Industrial_Goods.svg"
+            />
+            <h3>
+              Industrial Goods
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Financial"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="Financial.svg"
+            />
+            <h3>
+              Financial
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Services"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="Services.svg"
+            />
+            <h3>
+              Services
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+          <a
+            href="/list/Conglomerates"
+          >
+            <i
+              class="fa-sharp fa-solid fa-arrow-right"
+            />
+            <img
+              alt=""
+              src="Conglomerates.svg"
+            />
+            <h3>
+              Conglomerates
+            </h3>
+            <span>
+              0
+               
+              Stocks
+            </span>
+          </a>
+        </div>
+        <h4>
+          First 1000 Stocks
+        </h4>
+        <input
+          placeholder="Search stock by company's name"
+          type="text"
+        />
+        <div
+          class="home_stock__list"
+        >
+          <div
+            class="list__container"
+          >
+            <ul />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

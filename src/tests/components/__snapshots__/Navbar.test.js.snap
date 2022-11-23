@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders navbar component snapshot 1`] = `
+<DocumentFragment>
+  <nav>
+    <button
+      type="button"
+    >
+       
+      <i
+        class="fa-solid fa-chevron-left"
+      />
+      2022
+    </button>
+    <p>
+      All  Stocks
+    </p>
+    <div>
+      <i
+        class="fa-solid fa-microphone"
+      />
+      <i
+        class="fa-solid fa-gear"
+      />
+    </div>
+  </nav>
+</DocumentFragment>
+`;
