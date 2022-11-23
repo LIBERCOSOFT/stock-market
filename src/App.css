@@ -71,8 +71,29 @@ nav > div > i {
   background-color: #35548b;
 }
 
+.homepage > input[type='text'] {
+  width: 40vw;
+  margin: 1em 2em;
+  padding: 0.5em;
+  font-size: large;
+  border: 3px solid #fff;
+  outline: none;
+}
+
+.homepage > input[type='text']:focus {
+  border: 3px solid #2a416f;
+}
+
+.home_stock__list {
+  width: 90%;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
 .filter__container > a > img {
-  height: 3em;
+  height: 1.5em;
   width: 3em;
 }
 
@@ -80,7 +101,7 @@ nav > div > i {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   color: #fff;
-  font-size: x-large;
+  font-size: medium;
 }
 
 .list__container > ul > li:hover,
@@ -115,12 +136,12 @@ nav > div > i {
 
 .filter__container > a > span {
   align-self: flex-end;
-  font-size: large;
+  font-size: small;
 }
 
 .filter__container .fa-arrow-right {
   align-self: flex-end;
-  border: 5px solid #fff;
+  border: 2px solid #fff;
   border-radius: 50%;
   padding: 0.1em;
   margin-top: 0.3em;

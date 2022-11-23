@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders list-all-stock component snapshot 1`] = `
+<DocumentFragment>
+  <li>
+    <a
+      href="/details/"
+    >
+      <div>
+        <p>
+          <span>
+            Name:
+          </span>
+           
+        </p>
+        <p>
+          <span>
+            Industry:
+          </span>
+           
+        </p>
+        <p>
+          <span>
+            Price per Stock:
+          </span>
+           $0
+        </p>
+        <p>
+          <span>
+            Exchange:
+          </span>
+           
+        </p>
+        <p>
+          <span>
+            Market Cap:
+          </span>
+           $0
+        </p>
+        <p>
+          <span>
+            See about 
+          </span>
+           
+          <i
+            class="fa-sharp fa-solid fa-arrow-right"
+          />
+        </p>
+      </div>
+    </a>
+  </li>
+</DocumentFragment>
+`;

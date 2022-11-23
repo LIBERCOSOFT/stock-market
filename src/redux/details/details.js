@@ -6,7 +6,7 @@ import { getStockProfile } from '../APIs';
 
 const GET_STOCK_PROFILE = 'stockMarket/details/getStockProfile';
 
-const stockProfileApiCall = async (stock) => {
+export const stockProfileApiCall = async (stock) => {
   const stocks = await axios.get(getStockProfile(stock));
   return stocks.data;
 };

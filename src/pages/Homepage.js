@@ -1,8 +1,9 @@
 /* eslint-disable max-len */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchStocks } from '../redux/homepage/homepage';
+import ListItem from '../components/ListItem';
 import Loader from '../components/Loader';
 
 import allStockImg from '../components/images/all_stock.svg';
@@ -25,7 +26,7 @@ import conglomerates from '../components/images/Conglomerates.svg';
 const Homepage = () => {
   const allStocks = useSelector((state) => state.allStocks.data);
   const loading = useSelector((state) => state.allStocks.loading);
-
+  const [searchQuery, setsearchQuery] = useState('');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -51,6 +52,10 @@ const Homepage = () => {
     { query: 'Services', img: services },
     { query: 'Conglomerates', img: conglomerates },
   ];
+
+  const handleSearch = (e) => {
+    setsearchQuery(e.target.value);
+  };
 
   return (
     <div className="homepage">
@@ -87,6 +92,20 @@ const Homepage = () => {
           </Link>
         ))}
       </div>
+      <h4>First 1000 Stocks</h4>
+      <input type="text" onChange={handleSearch} placeholder="Search stock by company's name" />
+      <div className="home_stock__list">
+        <div className="list__container">
+          <ul>
+            {(searchQuery.length > 0) ? allStocks.allAssets.slice(0, 1000).filter((stock) => (stock.companyName.toLowerCase()).includes(searchQuery.toLowerCase())).map((stock) => (
+              <ListItem key={stock.symbol} stock={stock} />
+            )) : allStocks.allAssets.slice(0, 1000).map((stock) => (
+              <ListItem key={stock.symbol} stock={stock} />
+            ))}
+          </ul>
+        </div>
+      </div>
+
     </div>
   );
 };

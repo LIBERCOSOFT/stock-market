@@ -6,7 +6,7 @@ import { getAllStocks } from '../APIs';
 
 const GET_ALL_STOCKS = 'stockMarket/homepage/getAllStocks';
 
-const allStocksApiCall = async () => {
+export const allStocksApiCall = async () => {
   const stocks = await axios.get(getAllStocks);
   const data = {
     'Consumer Cyclical': [],

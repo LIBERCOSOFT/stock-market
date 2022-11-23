@@ -1,8 +1,9 @@
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { fetchStocks } from '../redux/homepage/homepage';
+import ListItem from '../components/ListItem';
 import Loader from '../components/Loader';
 
 import consumerCyclical from '../components/images/consumer-svgrepo-com.svg';
@@ -68,43 +69,7 @@ const ListFilteredStocks = () => {
       <div className="list__container">
         <ul>
           {render ? (allStocks[`${id}`] || []).map((stock) => (
-            <li key={stock.symbol}>
-              <Link to={`/details/${stock.symbol}`}>
-                <div>
-                  <p>
-                    <span>Name:</span>
-                    {' '}
-                    {stock.companyName}
-                  </p>
-                  <p>
-                    <span>Industry:</span>
-                    {' '}
-                    {stock.industry}
-                  </p>
-                  <p>
-                    <span>Price per Stock:</span>
-                    {' '}
-                    $
-                    {stock.price}
-                  </p>
-                  <p>
-                    <span>Market Cap:</span>
-                    {' '}
-                    $
-                    {stock.marketCap.toLocaleString()}
-                  </p>
-                  <p>
-                    <span>
-                      See about
-                      {' '}
-                      {stock.symbol}
-                    </span>
-                    {' '}
-                    <i className="fa-sharp fa-solid fa-arrow-right" />
-                  </p>
-                </div>
-              </Link>
-            </li>
+            <ListItem key={stock.symbol} stock={stock} />
           )) : <Loader />}
         </ul>
       </div>
